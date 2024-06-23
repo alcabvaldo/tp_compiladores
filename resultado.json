@@ -1,0 +1,562 @@
+[
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "un",
+        "POSICION": "TXT1-1"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "intérprete",
+        "POSICION": "TXT1-2"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "es",
+        "POSICION": "TXT1-3"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "un",
+        "POSICION": "TXT1-4"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "programa",
+        "POSICION": "TXT1-5"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "informático",
+        "POSICION": "TXT1-6"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "que",
+        "POSICION": "TXT1-7"
+    },
+    {
+        "TOKEN": "VERBO",
+        "LEXEMA": "procesa",
+        "POSICION": "TXT1-8"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "el",
+        "POSICION": "TXT1-9"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "código",
+        "POSICION": "TXT1-10"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "fuente",
+        "POSICION": "TXT1-11"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "mientras",
+        "POSICION": "TXT1-12"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "el",
+        "POSICION": "TXT1-13"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "software",
+        "POSICION": "TXT1-14"
+    },
+    {
+        "TOKEN": "ADVERBIO",
+        "LEXEMA": "se",
+        "POSICION": "TXT1-15"
+    },
+    {
+        "TOKEN": "VERBO",
+        "LEXEMA": "está",
+        "POSICION": "TXT1-16"
+    },
+    {
+        "TOKEN": "VERBO",
+        "LEXEMA": "ejecutando",
+        "POSICION": "TXT1-17"
+    },
+    {
+        "TOKEN": "VERBO",
+        "LEXEMA": "actúa",
+        "POSICION": "TXT1-18"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "como",
+        "POSICION": "TXT1-19"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "una",
+        "POSICION": "TXT1-20"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "interfaz",
+        "POSICION": "TXT1-21"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "entre",
+        "POSICION": "TXT1-22"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "ese",
+        "POSICION": "TXT1-23"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "proyecto",
+        "POSICION": "TXT1-24"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "y",
+        "POSICION": "TXT1-25"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "el",
+        "POSICION": "TXT1-26"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "procesador",
+        "POSICION": "TXT1-27"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "un",
+        "POSICION": "TXT1-28"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "intérprete",
+        "POSICION": "TXT1-29"
+    },
+    {
+        "TOKEN": "ADVERBIO",
+        "LEXEMA": "siempre",
+        "POSICION": "TXT1-30"
+    },
+    {
+        "TOKEN": "VERBO",
+        "LEXEMA": "procesa",
+        "POSICION": "TXT1-31"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "el",
+        "POSICION": "TXT1-32"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "código",
+        "POSICION": "TXT1-33"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "línea",
+        "POSICION": "TXT1-34"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "por",
+        "POSICION": "TXT1-35"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "línea",
+        "POSICION": "TXT1-36"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "de",
+        "POSICION": "TXT1-37"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "modo",
+        "POSICION": "TXT1-38"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "que",
+        "POSICION": "TXT1-39"
+    },
+    {
+        "TOKEN": "VERBO",
+        "LEXEMA": "lee",
+        "POSICION": "TXT1-40"
+    },
+    {
+        "TOKEN": "VERBO",
+        "LEXEMA": "analiza",
+        "POSICION": "TXT1-41"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "y",
+        "POSICION": "TXT1-42"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "prepara",
+        "POSICION": "TXT1-43"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "cada",
+        "POSICION": "TXT1-44"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "secuencia",
+        "POSICION": "TXT1-45"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "de",
+        "POSICION": "TXT1-46"
+    },
+    {
+        "TOKEN": "VERBO",
+        "LEXEMA": "forma",
+        "POSICION": "TXT1-47"
+    },
+    {
+        "TOKEN": "OTROS",
+        "LEXEMA": "consecutiva",
+        "POSICION": "TXT1-48"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "para",
+        "POSICION": "TXT1-49"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "el",
+        "POSICION": "TXT1-50"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "procesador",
+        "POSICION": "TXT1-51"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "este",
+        "POSICION": "TXT1-52"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "principio",
+        "POSICION": "TXT1-53"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "también",
+        "POSICION": "TXT1-54"
+    },
+    {
+        "TOKEN": "ADVERBIO",
+        "LEXEMA": "se",
+        "POSICION": "TXT1-55"
+    },
+    {
+        "TOKEN": "VERBO",
+        "LEXEMA": "aplica",
+        "POSICION": "TXT1-56"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "a",
+        "POSICION": "TXT1-57"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "las",
+        "POSICION": "TXT1-58"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "secuencias",
+        "POSICION": "TXT1-59"
+    },
+    {
+        "TOKEN": "OTROS",
+        "LEXEMA": "recurrentes",
+        "POSICION": "TXT1-60"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "que",
+        "POSICION": "TXT1-61"
+    },
+    {
+        "TOKEN": "ADVERBIO",
+        "LEXEMA": "se",
+        "POSICION": "TXT1-62"
+    },
+    {
+        "TOKEN": "VERBO",
+        "LEXEMA": "ejecutan",
+        "POSICION": "TXT1-63"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "de",
+        "POSICION": "TXT1-64"
+    },
+    {
+        "TOKEN": "ADJETIVO",
+        "LEXEMA": "nuevo",
+        "POSICION": "TXT1-65"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "cada",
+        "POSICION": "TXT1-66"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "vez",
+        "POSICION": "TXT1-67"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "que",
+        "POSICION": "TXT1-68"
+    },
+    {
+        "TOKEN": "VERBO",
+        "LEXEMA": "vuelven",
+        "POSICION": "TXT1-69"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "a",
+        "POSICION": "TXT1-70"
+    },
+    {
+        "TOKEN": "VERBO",
+        "LEXEMA": "aparecer",
+        "POSICION": "TXT1-71"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "en",
+        "POSICION": "TXT1-72"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "el",
+        "POSICION": "TXT1-73"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "código",
+        "POSICION": "TXT1-74"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "para",
+        "POSICION": "TXT1-75"
+    },
+    {
+        "TOKEN": "VERBO",
+        "LEXEMA": "procesar",
+        "POSICION": "TXT1-76"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "el",
+        "POSICION": "TXT1-77"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "código",
+        "POSICION": "TXT1-78"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "fuente",
+        "POSICION": "TXT1-79"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "del",
+        "POSICION": "TXT1-80"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "software",
+        "POSICION": "TXT1-81"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "el",
+        "POSICION": "TXT1-82"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "intérprete",
+        "POSICION": "TXT1-83"
+    },
+    {
+        "TOKEN": "VERBO",
+        "LEXEMA": "recurre",
+        "POSICION": "TXT1-84"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "a",
+        "POSICION": "TXT1-85"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "sus",
+        "POSICION": "TXT1-86"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "propias",
+        "POSICION": "TXT1-87"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "bibliotecas",
+        "POSICION": "TXT1-88"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "internas",
+        "POSICION": "TXT1-89"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "en",
+        "POSICION": "TXT1-90"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "cuanto",
+        "POSICION": "TXT1-91"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "una",
+        "POSICION": "TXT1-92"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "línea",
+        "POSICION": "TXT1-93"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "de",
+        "POSICION": "TXT1-94"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "código",
+        "POSICION": "TXT1-95"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "fuente",
+        "POSICION": "TXT1-96"
+    },
+    {
+        "TOKEN": "ADVERBIO",
+        "LEXEMA": "se",
+        "POSICION": "TXT1-97"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "ha",
+        "POSICION": "TXT1-98"
+    },
+    {
+        "TOKEN": "VERBO",
+        "LEXEMA": "traducido",
+        "POSICION": "TXT1-99"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "a",
+        "POSICION": "TXT1-100"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "los",
+        "POSICION": "TXT1-101"
+    },
+    {
+        "TOKEN": "ADJETIVO",
+        "LEXEMA": "correspondientes",
+        "POSICION": "TXT1-102"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "comandos",
+        "POSICION": "TXT1-103"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "legibles",
+        "POSICION": "TXT1-104"
+    },
+    {
+        "TOKEN": "ARTICULO",
+        "LEXEMA": "por",
+        "POSICION": "TXT1-105"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "máquina",
+        "POSICION": "TXT1-106"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "esta",
+        "POSICION": "TXT1-107"
+    },
+    {
+        "TOKEN": "ADVERBIO",
+        "LEXEMA": "se",
+        "POSICION": "TXT1-108"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "envía",
+        "POSICION": "TXT1-109"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "directamente",
+        "POSICION": "TXT1-110"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "al",
+        "POSICION": "TXT1-111"
+    },
+    {
+        "TOKEN": "SUSTANTIVO",
+        "LEXEMA": "procesador",
+        "POSICION": "TXT1-112"
+    }
+]
