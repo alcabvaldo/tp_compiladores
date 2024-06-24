@@ -1,0 +1,9 @@
+Un intérprete es un programa informático que procesa el código fuente mientras el 
+software se está ejecutando. Actúa como una interfaz entre ese proyecto y el procesador. 
+Un intérprete siempre procesa el código línea por línea, de modo que lee, analiza y prepara 
+cada secuencia de forma consecutiva para el procesador. Este principio también se aplica a 
+las secuencias recurrentes, que se ejecutan de nuevo cada vez que vuelven a aparecer en 
+el código. Para procesar el código fuente del software, el intérprete recurre a sus propias 
+bibliotecas internas: en cuanto una línea de código fuente se ha traducido a los 
+correspondientes comandos legibles por máquina, esta se envía directamente al 
+procesador casa casita rancho palacio comer. 
