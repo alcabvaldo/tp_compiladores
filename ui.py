@@ -3,7 +3,7 @@ import os
 import re
 import tkinter as tk
 from tkinter import filedialog, messagebox
-from tokenizer import leer_archivo, procesar_texto, guardar_resultado, cargar_diccionario_tokens, guardar_diccionario_tokens
+from tokenizer import leer_archivo, procesar_texto, guardar_resultado, cargar_diccionario_tokens, guardar_diccionario_tokens, extraer_lexemas
 
 class TokenizadorApp:
     def __init__(self, root):
@@ -24,7 +24,7 @@ class TokenizadorApp:
         self.select_button = tk.Button(root, text="Seleccionar Archivo", command=self.seleccionar_archivo)
         self.select_button.pack(padx=10, pady=10)
 
-        self.leer_salida_button = tk.Button(root, text="Leer salida anterior?", command=lambda: [self.seleccionar_archivo_json(), self.show_json_as_table(self.file_path)])
+        self.leer_salida_button = tk.Button(root, text="Leer salida anterior?", command=lambda: [self.seleccionar_archivo_json(), self.show_json_as_table(self.out_file_path)])
         self.leer_salida_button.pack(side=tk.BOTTOM, padx=10, pady=10)
 
         self.load_tokens_var = tk.BooleanVar(value=True)
@@ -176,17 +176,19 @@ class TokenizadorApp:
         return max_num
 
     def highlight_lexema(self, texto, lexema, index):
-        palabras = texto.split()
+        palabras = extraer_lexemas(texto.lower(), self.log)
         start = max(0, index - 20)
         end = min(len(palabras), index + 21)
-        surrounding_text = " ".join(palabras[start:index]) + " " + palabras[index] + " " + " ".join(palabras[index+1:end])
+        surrounding_text = " ".join(palabras[start:index])
+        lexema_index = len(surrounding_text)+1
+        surrounding_text = surrounding_text + " " + palabras[index] + " " + " ".join(palabras[index+1:end])
 
         self.lexema_text.config(state=tk.NORMAL)
         self.lexema_text.delete(1.0, tk.END)
         self.lexema_text.insert(tk.END, surrounding_text)
         self.lexema_text.tag_add("highlight", "1.0", tk.END)
 
-        lexema_index = surrounding_text.find(palabras[index])
+        # lexema_index = surrounding_text.find(palabras[index])
         lexema_length = len(palabras[index])
         self.lexema_text.tag_add("lexema", f"1.{lexema_index}", f"1.{lexema_index + lexema_length}")
         self.lexema_text.config(state=tk.DISABLED)
