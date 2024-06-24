@@ -33,7 +33,11 @@ def clasificar_lexema(lexema):
     return None
 
 def actualizar_patrones(token, lexema):
-    diccionario_tokens[token].append(lexema)
+    if token == "ADJETIVO":
+        base_lexema = lexema[:-1] if lexema.endswith(('o', 'a')) else lexema[:-2] if lexema.endswith(('os', 'as')) else lexema
+        diccionario_tokens[token].extend([base_lexema + suffix for suffix in ['o', 'a', 'os', 'as']])
+    else:
+        diccionario_tokens[token].append(lexema)
     cantidad_lexemas_por_token_en_diccionario[token] += 1
 
 def leer_archivo(file_path):
