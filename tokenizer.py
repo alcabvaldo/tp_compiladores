@@ -85,8 +85,8 @@ def procesar_texto(texto, nro_archivos_leidos, clasificar_manual, log):
         })
 
     log(f"Lexemas totales: {len(lexemas)}")
-    log(f"Lexemas procesados previamente: {lexemas_clasificados}, {(lexemas_clasificados/len(lexemas))*100}% del total")
-    log(f"Lexemas no procesados previamente que fueron asignados: {lexemas_no_clasificados}, {(lexemas_no_clasificados/len(lexemas))*100}% del total")
+    log(f"Lexemas procesados previamente: {lexemas_clasificados}, {round((lexemas_clasificados/len(lexemas))*100, 2)}% del total")
+    log(f"Lexemas no procesados previamente que fueron asignados: {lexemas_no_clasificados}, {round((lexemas_no_clasificados/len(lexemas))*100, 2)}% del total")
 
     log("Cantidad de lexemas por token antes de la lectura:")
     log(json.dumps(cantidad_inicial_lexemas_por_token, indent=4, ensure_ascii=False))
@@ -99,18 +99,26 @@ def guardar_resultado(resultado, file_path):
     with open(file_path, 'w', encoding='utf-8') as file:
         json.dump(resultado, file, ensure_ascii=False, indent=4)
 
-def cargar_diccionario_tokens(diccionario_file):
+def cargar_diccionario_tokens(diccionario_file, cargar_tokens_previos):
     global diccionario_tokens, cantidad_lexemas_por_token, cantidad_inicial_lexemas_por_token
-    try:
-        with open(diccionario_file, 'r', encoding='utf-8') as file:
-            saved_tokens = json.load(file)
-            print("saved_tokens: ", saved_tokens)
-            for token, lexemas in saved_tokens.items():
-                diccionario_tokens[token].extend(lexemas) #agrego los lexemas no precargados al diccionario
-                cantidad_lexemas_por_token[token] = len(lexemas)
-                cantidad_inicial_lexemas_por_token[token] = len(lexemas)
-    except FileNotFoundError:
-        pass
+    if cargar_tokens_previos:
+        try:
+            with open(diccionario_file, 'r', encoding='utf-8') as file:
+                saved_tokens = json.load(file)
+                print("Tokens cargados desde el diccionario:")
+                print(json.dumps(saved_tokens, indent=4, ensure_ascii=False))
+                for token, lexemas in saved_tokens.items():
+                    diccionario_tokens[token].extend(lexemas) #agrego los lexemas no precargados al diccionario
+                    cantidad_lexemas_por_token[token] = len(lexemas)
+                    cantidad_inicial_lexemas_por_token[token] = len(lexemas)
+        except FileNotFoundError:
+            pass
+    else:
+        print("Se utilizara el diccionario por defecto:")
+        print(json.dumps(diccionario_tokens, indent=4, ensure_ascii=False))
+        for token, lexemas in diccionario_tokens.items():
+            cantidad_lexemas_por_token[token] = len(lexemas)
+            cantidad_inicial_lexemas_por_token[token] = len(lexemas)
 
 def guardar_diccionario_tokens(diccionario_file):
     with open(diccionario_file, 'w', encoding='utf-8') as file:

@@ -27,6 +27,10 @@ class TokenizadorApp:
         self.leer_salida_button = tk.Button(root, text="Leer salida anterior?", command=lambda: [self.seleccionar_archivo_json(), self.show_json_as_table(self.file_path)])
         self.leer_salida_button.pack(side=tk.BOTTOM, padx=10, pady=10)
 
+        self.load_tokens_var = tk.BooleanVar(value=True)
+        self.load_tokens_checkbox = tk.Checkbutton(root, text="Cargar diccionario de tokens previos", variable=self.load_tokens_var)
+        self.load_tokens_checkbox.pack(pady=10)
+
         self.process_button = tk.Button(root, text="Procesar Texto", command=self.procesar_texto, state=tk.DISABLED)
         self.process_button.pack(pady=10)
 
@@ -64,9 +68,6 @@ class TokenizadorApp:
         self.out_file_path = None
         self.current_lexema = None
         self.pending_lexemas = []
-
-        # Load the previous tokens from the file
-        cargar_diccionario_tokens(self.diccionario_file)
 
         # Bind the window close event
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
@@ -106,6 +107,9 @@ class TokenizadorApp:
         self.current_lexema = None
 
     def procesar_texto(self):
+        # Load the previous tokens from the file
+        cargar_diccionario_tokens(self.diccionario_file, self.load_tokens_var.get())
+
         if self.file_path:
             self.log(f"Leyendo archivo nro: {self.nro_archivos_leidos}")
             texto = leer_archivo(self.file_path)
@@ -125,7 +129,7 @@ class TokenizadorApp:
             data = json.load(file)
 
         table_window = tk.Toplevel(self.root)
-        table_window.title("Resultados del Análisis")
+        table_window.title("Tabla de salida en lenguaje de Tokens")
 
         canvas = tk.Canvas(table_window)
         scrollbar = tk.Scrollbar(table_window, orient="vertical", command=canvas.yview)
@@ -161,7 +165,7 @@ class TokenizadorApp:
 
     def obtener_nro_archivos_leidos(self):
         archivos = os.listdir('resultados/')
-        print(archivos)
+        print("Archivos de salida previos encontrados: " + ", ".join(archivos))
         max_num = 0
         for archivo in archivos:
             match = re.match(r'salida_(\d+)', archivo)
