@@ -14,7 +14,7 @@ cantidad_lexemas_por_token = {}
 diccionario_tokens = {
     "ARTICULO": ["el", "la", "los", "las", "un", "una", "unos", "unas"],
     "SUSTANTIVO": ["casa", "perro", "gato", "niño", "mujer", "hombre", "libro", "coche", "ciudad", "país"],
-    "VERBO": ["ser", "estar", "tener", "hacer", "poder", "decir", "ir", "ver", "dar", "saber"],
+    "VERBO": ["ser", "estar", "tener", r"\b\w+(ar|er|ir|ando|iendo|ado|ido|aré|eré|iré|aría|ería|iría|abas|ías|aste|iste|ó|ió|amos|imos|aron|ieron|aré|eré|iré|aremos|eremos|iremos|arán|erán|irán)\b"],
     "ADJETIVO": ["bueno", "malo", "grande", "pequeño", "nuevo", "viejo", "alto", "bajo", "largo", "corto"],
     "ADVERBIO": ["bien", "mal", "muy", "más", "menos", "nunca", "siempre", "ahora", "después", "antes"],
     "OTROS": ["y", "o", "pero", "porque", "si", "aunque", "como", "cuando", "donde", "que"],
@@ -27,8 +27,9 @@ for token, lexemas in diccionario_tokens.items():
 
 def clasificar_lexema(lexema):
     for token, patrones in diccionario_tokens.items():
-        if lexema in patrones:
-            return token
+        for patron in patrones:
+            if re.fullmatch(patron, lexema):
+                return token
     return None
 
 def actualizar_patrones(token, lexema):
@@ -66,6 +67,7 @@ def procesar_texto(texto, nro_archivos_leidos, clasificar_manual, log):
     global lexemas_no_clasificados,lexemas_clasificados
     lexemas = extraer_lexemas(texto.lower(), log)
     resultado = []
+    columna_fija = 35
 
     for i, lexema in enumerate(lexemas):
         print("clasificando lexema: ", lexema)
@@ -73,11 +75,12 @@ def procesar_texto(texto, nro_archivos_leidos, clasificar_manual, log):
             break
         token = clasificar_lexema(lexema)
         if not token:
-            print(f"lexema: {lexema} no esta clasificado, clasificando manual")
+            log(f"Clasificando manualmente lexema: {lexema}")
             token = clasificar_manual(texto, lexema, i)
             actualizar_patrones(token, lexema)
             lexemas_no_clasificados += 1
         else:
+            log(f"Clasificado lexema: {lexema.ljust(columna_fija - len('Clasificado lexema: '))} - {token}")
             lexemas_clasificados += 1
 
         resultado.append({
@@ -118,19 +121,21 @@ def cargar_diccionario_tokens(diccionario_file, cargar_tokens_previos):
                 print("Tokens cargados desde el diccionario:")
                 print(json.dumps(saved_tokens, indent=4, ensure_ascii=False))
                 for token, lexemas in saved_tokens.items():
-                    diccionario_tokens[token].extend(lexemas) #agrego los lexemas no precargados al diccionario
+                    # Convertir a conjunto para eliminar duplicados
+                    nuevos_lexemas = set(lexemas) - set(diccionario_tokens.get(token, []))
+                    diccionario_tokens.setdefault(token, []).extend(nuevos_lexemas)
                     cantidad_lexemas_por_token[token] = 0
-                    cantidad_lexemas_por_token_en_diccionario[token] = len(lexemas)
-                    cantidad_inicial_lexemas_por_token_en_diccionario[token] = len(lexemas)
+                    cantidad_lexemas_por_token_en_diccionario[token] = len(diccionario_tokens[token])
+                    cantidad_inicial_lexemas_por_token_en_diccionario[token] = len(diccionario_tokens[token])
         except FileNotFoundError:
             pass
     else:
-        print("Se utilizara el diccionario por defecto:")
+        print("Se utilizará el diccionario por defecto:")
         print(json.dumps(diccionario_tokens, indent=4, ensure_ascii=False))
         for token, lexemas in diccionario_tokens.items():
             cantidad_lexemas_por_token_en_diccionario[token] = len(lexemas)
             cantidad_inicial_lexemas_por_token_en_diccionario[token] = len(lexemas)
-            cantidad_lexemas_por_token = 0
+            cantidad_lexemas_por_token[token] = 0
 
 def guardar_diccionario_tokens(diccionario_file):
     with open(diccionario_file, 'w', encoding='utf-8') as file:

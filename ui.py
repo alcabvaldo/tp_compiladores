@@ -92,9 +92,6 @@ class TokenizadorApp:
     def clasificar_manual(self, texto, lexema, index):
         self.current_lexema = lexema
         self.texto_completo = texto
-
-        self.text_box.insert(tk.END, f"\nClasificando manualmente lexema: {lexema}")
-
         self.highlight_lexema(texto, lexema, index)
         self.confirm_button.config(state=tk.NORMAL)
         self.process_button.config(state=tk.DISABLED)
@@ -164,6 +161,9 @@ class TokenizadorApp:
 
 
     def obtener_nro_archivos_leidos(self):
+        if not os.path.exists('resultados/'):
+            os.makedirs('resultados/')
+            return 0
         archivos = os.listdir('resultados/')
         print("Archivos de salida previos encontrados: " + ", ".join(archivos))
         max_num = 0
