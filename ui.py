@@ -143,7 +143,8 @@ class TokenizadorApp:
         canvas.configure(yscrollcommand=scrollbar.set)
 
         def on_mouse_wheel(event, canvas=canvas):
-            canvas.yview_scroll(int(-1*(event.delta/120)), "units")
+            if canvas.winfo_exists():
+                canvas.yview_scroll(int(-1*(event.delta/120)), "units")
 
         canvas.bind_all("<MouseWheel>", on_mouse_wheel)
 
@@ -195,6 +196,7 @@ class TokenizadorApp:
 
     def on_closing(self):
         # Save the tokens before closing
+        print("guardando diccionario antes de cerrar")
         guardar_diccionario_tokens(self.diccionario_file)
         self.root.destroy()
         os._exit(0)
