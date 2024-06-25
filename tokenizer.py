@@ -18,7 +18,7 @@ diccionario_tokens = {
     "ADJETIVO": ["bueno", "malo", "grande", "pequeño", "nuevo", "viejo", "alto", "bajo", "largo", "corto"],
     "ADVERBIO": ["bien", "mal", "muy", "más", "menos", "nunca", "siempre", "ahora", "después", "antes"],
     "OTROS": ["y", "o", "pero", "porque", "si", "aunque", "como", "cuando", "donde", "que"],
-    "ERROR_LX": ["@#$%<>`~","csa", "gto", "aunqe", "poer", "esatr", "tenr", "libor", "pquiño", "mnus", "dondee"]
+    "ERROR_LX": ["@", "#", "$", "%", "<", ">", "`", "~", "1", "あ"]
 }
 
 # Initialize cantidad_lexemas_por_token
@@ -65,6 +65,7 @@ def extraer_lexemas(texto, log):
                 continue
             else:
                 log(f"ERROR: Carácter no reconocido: '{char}'")
+                diccionario_tokens["ERROR_LX"].append(char)
                 raise ValueError(f"Carácter no reconocido: '{char}'")
 
     if palabra:  # Añadir la última palabra si existe
